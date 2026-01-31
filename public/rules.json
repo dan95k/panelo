@@ -6,24 +6,20 @@
             "type": "modifyHeaders",
             "responseHeaders": [
                 {
-                    "header": "x-frame-options",
+                    "header": "X-Frame-Options",
                     "operation": "remove"
                 },
                 {
-                    "header": "frame-options",
-                    "operation": "remove"
-                },
-                {
-                    "header": "content-security-policy",
+                    "header": "Content-Security-Policy",
                     "operation": "remove"
                 }
             ]
         },
         "condition": {
+            "urlFilter": "*",
             "resourceTypes": [
                 "sub_frame"
-            ],
-            "urlFilter": "*"
+            ]
         }
     }
 ]

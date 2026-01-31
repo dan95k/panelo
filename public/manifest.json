@@ -5,7 +5,8 @@
     "description": "Personalized dashboard with AI-driven website management",
     "permissions": [
         "storage",
-        "declarativeNetRequest"
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess"
     ],
     "host_permissions": [
         "<all_urls>"

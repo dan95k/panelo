@@ -40,3 +40,46 @@
 ::-webkit-scrollbar-thumb {
   @apply bg-gray-700/50 rounded-full hover:bg-gray-600/80;
 }
+
+/* React Grid Layout Custom Styles */
+.react-grid-item.resizing {
+  opacity: 0.9;
+  z-index: 100;
+}
+
+/* Override the default red placeholder */
+.react-grid-placeholder {
+  background: rgba(59, 130, 246, 0.2) !important;
+  border: 2px dashed rgba(59, 130, 246, 0.5) !important;
+  border-radius: 8px !important;
+  opacity: 1 !important;
+  z-index: 2 !important;
+  transition: all 200ms ease !important;
+}
+
+/* Style the resize handles */
+.react-resizable-handle {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.react-grid-item:hover .react-resizable-handle {
+  opacity: 1;
+}
+
+.react-resizable-handle::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(59, 130, 246, 0.6);
+  border-bottom: 2px solid rgba(59, 130, 246, 0.6);
+  border-radius: 0 0 4px 0;
+}
+
+.react-resizable-handle:hover::after {
+  border-right-color: rgba(59, 130, 246, 1);
+  border-bottom-color: rgba(59, 130, 246, 1);
+}

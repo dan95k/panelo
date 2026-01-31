@@ -75,13 +75,11 @@ export const WebsiteBox: React.FC<WebsiteBoxProps> = ({ box, onRemove }) => {
 
             {/* Content */}
             <div className="flex-1 w-full relative bg-white">
-                {/* Overlay to capture clicks during drag/resize if needed, usually Rnd handles this but simple iframe interaction is tricky with dnd */}
                 <iframe
                     key={refreshKey}
                     src={box.url}
                     className="w-full h-full border-0"
                     title={box.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 />
             </div>
         </div>
